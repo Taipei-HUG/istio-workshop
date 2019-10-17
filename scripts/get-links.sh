@@ -11,5 +11,8 @@ echo "http://${ep}:15031"
 echo "prometheus"
 echo "http://${ep}:15030"
 
-echo "Tracing"
+echo "tracing"
 echo "http://${ep}:15032"
+
+echo "productpage"
+echo "http://${ep}/productpage"
