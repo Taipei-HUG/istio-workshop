@@ -4,9 +4,11 @@ helm repo add istio.io https://storage.googleapis.com/istio-release/releases/1.3
 
 kubectl apply -f helm-service-account.yaml
 
-helm init --service-account tiller
+helm init --service-account tiller --wait
 
 helm upgrade --install istio-init --namespace istio-system istio.io/istio-init --wait
+
+sleep 10;
 
 helm upgrade --install istio --namespace istio-system -f istio-customized.yaml istio.io/istio --wait
 
