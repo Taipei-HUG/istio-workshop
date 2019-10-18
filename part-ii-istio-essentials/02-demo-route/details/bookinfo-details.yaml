@@ -46,6 +46,9 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
+        env:
+        - name: ENABLE_EXTERNAL_BOOK_SERVICE
+          value: "true"
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
